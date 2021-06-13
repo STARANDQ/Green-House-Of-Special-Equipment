@@ -1,0 +1,121 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 900px;
+    margin: 100px auto 100px auto;
+}
+
+.content__contact {
+    display: grid;
+    grid-template-rows: 100px 70px 70px 70px;
+}
+
+.content__contact__1 {
+    font-size: 30px;
+}
+
+.content__contact__2 {
+    font-size: 15px;
+    color: dimgrey;
+}
+
+.content__form {
+    margin-top: 30px;
+    horiz-align: right;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 60px 60px 60px 150px 60px;
+}
+
+.content__form__neta {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    width: 200px;
+    outline: none;
+    border-top: solid 2px #ffffff;
+    border-left: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    border-bottom: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__neta:hover {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__neta:focus {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__theme {
+    grid-column: 1 / span 2;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    width: 420px;
+    outline: none;
+    border-top: solid 2px #ffffff;
+    border-left: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    border-bottom: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__theme:hover {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__theme:focus {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__message {
+    grid-column: 1 / span 2;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 420px;
+    outline: none;
+    border-top: solid 2px #ffffff;
+    border-left: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    border-bottom: solid 2px #B9FF8E;
+    resize: none;
+    transition: 0.3s;
+}
+
+.content__form__message:hover {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__message:focus {
+    border: solid 2px #B9FF8E;
+    transition: 0.3s;
+}
+
+.content__form__button {
+    grid-column: 1 / span 2;
+    background-color: #B9FF8E;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 430px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid #88fa2e;
+    transition: 0.3s;
+}
+
+.content__form__button:hover {
+    opacity: 80%;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}

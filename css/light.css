@@ -1,0 +1,47 @@
+.light nav{
+    background: #D3FABA;
+}
+
+.light .logo{
+    background: #B9FF8E;
+}
+
+
+.light .blockButton a.category{
+    color:black;
+    background: #D3FABA;
+}
+
+.light .blockButton .category .circle {
+    background: white;
+    color: #5fb32b;
+}
+
+.light .blockButton .adminControl{
+    color:black;
+    background: #D3FABA;
+}
+
+.light .line{
+    background: #bababa;
+    box-shadow: #7d7d7d 0 0 4px 1px;
+}
+
+.light .content .column .description span{
+    color:grey;
+}
+
+.light .content .column .footerElement a.left{
+    background: #D2FFAF;
+}
+
+.light .content .column .footerElement .left .text{
+    color: black;
+}
+
+.light .content .column .footerElement .left .UAH{
+    color: #14B036;
+}
+.content .column .footerElement .right {
+    border-top: 2px solid green ;
+}
