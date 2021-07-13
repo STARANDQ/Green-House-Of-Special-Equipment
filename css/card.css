@@ -1,0 +1,86 @@
+.content_card {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+.content_card__title {
+    text-align: center;
+}
+
+.content_card__block {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    background-color: #eeeeee;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.content_card__block__first {
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.content_card__block textarea {
+    width: 85%;
+    height: 85%;
+}
+
+.content_card__block__first__info {
+    display: grid;
+    grid-template-columns: 20% 65%;
+}
+
+.content_card__block__first__info__input input {
+    width: 100%;
+}
+
+.content_card__block__second__img {
+    background-color: #A0FF7E;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.content_card__block__second__img__text {
+    text-align: center;
+}
+
+.content_card__block__second__items {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.removeElem{
+    color:red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    cursor: pointer;
+    border-left: 1px solid red;
+    padding-left: 10px;
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+.removeElem:hover{
+    color: #6a00ff;
+    transition: .5s;
+}
+
+
+.footerCard{
+    display: flow-root;
+    margin: 100px;
+}
+
+.footerCard label{
+    font-size: 50px;
+}
+
+.footerCard input{
+    font-size: 45px;
+}
