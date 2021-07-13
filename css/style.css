@@ -8,29 +8,6 @@ body{
     padding: 0;
 }
 
-
-header {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    width: 100%;
-    height: 210px;
-    margin-bottom: 15px;
-    background-color: #B9FF8E;
-    color: white;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-.header__img {
-    display: inline-block;
-    width: 146px;
-    height: 146px;
-    margin-left: 100px;
-    margin-top: 30px;
-    border: 0.5px solid black;
-    border-radius: 100%;
-}
-
 .header__text__title {
     display: inline-block;
     margin-bottom: 12px;
@@ -43,65 +20,146 @@ header {
     font-weight: bold;
 }
 
-:root {
-    --border-size: 0.125rem;
-    --duration: 250ms;
-    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-    --color-primary: #B9FF8E;
-    --color-secondary: white;
-    --space: 1rem;
+@media screen and (max-width: 1100px) {
+    .header__img {
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+    .header__text__title{
+        font-size: 40px;
+    }
 }
 
-.nav__buttons {
-    display: flex;
-    width: 100%;
-    font-size: 1.4rem;
-    font-weight: bold;
+.blockButton a{
+    display: inline-block;
     text-align: center;
-    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    width: 23%;
+    padding: 1%;
+    text-decoration: none;
 }
 
-.nav__buttons .nav__button__button {
-    flex-grow: 1;
-    cursor: pointer;
-    position: relative;
-    padding:
-            calc(var(--space) / 1.125)
-            var(--space)
-            var(--space);
-    border: var(--border-size) solid #6dff13;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    transition: flex-grow var(--duration) var(--ease);
+
+.blockButton .category{
+    float: left;
 }
 
-.nav__buttons .nav__button__button + .nav__button__button {
-    border-left: var(--border-size) solid #6dff13;
-    margin-left: calc(var(--border-size) * -1);
+.blockButton .category .circle{
+    padding: 1% 4% 1% 4%;
+    border-radius: 100%;
 }
 
-.nav__buttons .nav__button__button:hover,
-.nav__buttons .nav__button__button:focus {
-    flex-grow: 2;
-    color: #6dff13;
-    outline: none;
-    text-shadow: none;
-    background-color: var(--color-secondary);
+.blockButton .adminControl{
+    float: right;
 }
 
-.nav__buttons .nav__button__button:focus {
-    outline: var(--border-size) dashed var(--color-primary);
-    outline-offset: calc(var(--border-size) * -3);
+.line{
+    height: 1px;
 }
 
-.nav__buttons .nav__button__button:hover .nav__button__button:focus:not(:hover) {
-    flex-grow: 1;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
+
+
+/* STRUCTURE */
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+    padding: 30px;
 }
 
-.nav__buttons .nav__button__button:active {
-    transform: translateY(var(--border-size));
+@media screen and (max-width: 980px) {
+    .content .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+    }
+    .columns .column:nth-last-child(2) {
+        margin-right: 0;
+    }
+    .content .column:last-child {
+        flex-basis: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 680px) {
+    .content .column {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+}
+
+.content .column .image img{
+    height: 150px;
+}
+
+.content .column .name{
+    text-align: center;
+    margin-top: 2px;
+    font-size: 25px;
+}
+
+.content .column .info{
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.content .column .info .left,
+.content .column .info .right{
+    width: 50%;
+}
+
+.content .column .info .right img{
+    width: 100%;
+}
+
+.content .column .description{
+    padding: 5px 10px 10px;
+}
+
+.content .column .footerElement{
+    margin-top: 20px;
+}
+
+.light .content .column .footerElement a.left{
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+}
+
+.content .column .footerElement a{
+    text-decoration: none;
+    float: left;
+}
+
+.content .column .footerElement .right{
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px 0 10px;
+    font-size: 20px;
+}
+
+
+@font-face {
+    font-family: RopaSans; /* Имя шрифта */
+    src: url(../fonts/RopaSansRegular.ttf); /* Путь к файлу со шрифтом */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header__text__title {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.header__text__subtitle {
+    margin: 0;
+    font-weight: bold;
 }
 
 
@@ -143,34 +201,6 @@ header {
     padding: 30px;
 }
 
-.column {
-    flex: 1;
-    box-shadow: black 0 4px 6px;
-    margin: 15px 10px 15px 10px;
-    min-width: 30%;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.column .hide{
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    background: #ffffff;
-    text-align: center;
-    font-size: 20px;
-    z-index: -1;
-    padding: 5px 0 5px 0;
-    top:-100px;
-    display: none;
-}
-
-.column:hover .hide{
-
-}
-
-
-
 @media screen and (max-width: 980px) {
     .content .column {
         margin-bottom: 5px;
@@ -191,13 +221,6 @@ header {
     }
 }
 
-.content .image{
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #ababab;
-}
-
-
 .content .column .image img{
     height: 150px;
 }
@@ -206,10 +229,6 @@ header {
     text-align: center;
     margin-top: 2px;
     font-size: 25px;
-}
-.content .column .name span{
-    border-bottom: 2px solid black;
-    padding: 1px 15px 5px 15px;
 }
 
 .content .column .info{
@@ -222,17 +241,13 @@ header {
     width: 50%;
 }
 
-.content .column .info .left{
-    border-left: 2px solid gold;
-    padding-left: 5px;
-}
-
 
 .content .column .info .right {
 }
 
 .content .column .info .right img{
-    width: 100%;
+    width: 150px;
+    float: right;
 }
 
 .content .column .description{
@@ -262,53 +277,217 @@ header {
 }
 
 
-footer {
+.footer__first {
+    grid-area: footerTitle;
     display: grid;
-    grid-template-columns: 2fr 4fr 1fr;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 100%;
-    background-color: #B9FF8E;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+    grid-row-gap: 40px;
+    grid-template-areas:
+    "first"
+    "second";
 }
 
-.footer__title__img {
-    width: 45px;
+.footer__first__title {
+    grid-area: first;
     margin-left: 50px;
-    margin-top: 30px;
-    border: 0.5px solid black;
-    border-radius: 100%;
-    font-weight: 400;
+    margin-top: 20px;
 }
 
-.footer__title__text {
-    display: inline-block;
-    color: white;
-    /*font-weight: bold;*/
-}
-
-.footer__title__text__main-title {
+.footer__first__title__text__main-title {
     font-size: 20px;
     margin-bottom: 0px;
     font-weight: bold;
 }
 
-.footer__title__text__subtitle {
+.footer__first__title__text__subtitle {
     font-size: 10px;
 }
 
-.footer__social-networks {
-    margin-top: 80px;
-    margin-left: 170px;
+.footer__first__admin-panel {
+    grid-area: second;
+    margin-left: 50px;
 }
 
-.footer__social-networks__main {
+.footer__second-menu {
+    grid-area: footerMenu;
+    margin-top: 10px;
+}
+
+
+.footer__second-menu__elems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__third {
+    grid-area: footerSocial;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.footer__third__options__option {
+    width: 100px;
+    padding-right: 0;
+}
+
+.footer__third__options__option__images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.footer__third__options__option__images__image {
+    width: 40px;
+}
+
+.footer__third__social-networks__links {
+    display: inline-block;
+    margin-top: 55px;
+}
+
+.footer__third__social-networks__links__main {
     display: block;
     text-decoration: none;
     width: 30px;
     margin-top: 10px;
 }
 
-.footer__social-networks__main img:hover {
-    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+
+.controlElement{
+    text-align: center;
+}
+
+.controlElement table{
+    display: inline-block;
+    text-align: left;
+    font-size: 30px;
+}
+
+.controlElement table td{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.controlElement table tr:last-child{
+    vertical-align: top;
+}
+
+.deleteBlock{
+    text-align: right;
+}
+
+.deleteBlock hr{
+    display: block;
+}
+
+.controlTable div{
+    display: inline-block;
+}
+
+.blockLeft__controlTable{
+    width: 70%;
+    padding-left: 2%;
+}
+
+.blockRight__controlTable{
+    float: right;
+    text-align: center;
+    padding-top: 10px;
+    width: 27%;
+}
+
+.controlTable .blockLeft__controlTable table{
+    display: inline-block;
+    text-align: left;
+    font-size: 30px;
+}
+
+.controlTable .blockLeft__controlTable td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+}
+
+.notFound{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+
+.filter img{
+    width: 27px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.filter .blockLeft__filter,
+.filter .blockRight__filter{
+    display: inline-block;
+
+}
+
+.filter .blockRight__filter .blocksInput{
+    display: inline-block;
+}
+
+.filter .blockLeft__filter input{
+    width: 100px;
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.filter .blockRight__filter span.click{
+    cursor: pointer;
+}
+
+.filter .blockRight__filter .changed{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.infoGoods .image img{
+    width: 70%;
+}
+
+.infoGoods .font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.infoGoods .name{
+    text-align: center;
+    font-weight: 330;
+}
+
+.infoGoods .information{
+    padding: 10px 50px 50px;
+    font-size: 30px;
+}
+
+
+.infoGoods .price{
+    display: block;
+    margin: 30px 50px 0 0;
+    font-size: 30px;
+    float: right;
+}
+
+
+.content_card__block__second__img__text__imge{
+    width: 100%;
+}
+
+.content_card__block__second__img{
+    padding: 10px 10px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+.infoCompany{
+    font-size:30px;
+    padding: 50px;
 }
